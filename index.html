@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>TOKO ONLINE ZAHRA</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script>
+    function lihatDetail(nama, harga, deskripsi, gambar) {
+      let newWindow = window.open("", "Detail Produk", "width=400,height=500");
+      newWindow.document.write("<h2>" + nama + "</h2>");
+      newWindow.document.write("<img src='" + gambar + "' style='width:250px; border-radius:10px;'><br>");
+      newWindow.document.write("<p><b>Harga:</b> " + harga + "</p>");
+      newWindow.document.write("<p>" + deskripsi + "</p>");
+      newWindow.document.write("<button onclick='window.close()' style='padding:10px; background:#ff69b4; color:white; border:none; border-radius:5px; cursor:pointer;'>Tutup</button>");
+    }
+
+    function beliProduk(nama) {
+      alert("Produk " + nama + " berhasil ditambahkan ke keranjang!");
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>TOKO ONLINE ZAHRA</h1>
+    <nav>
+  <a href="index.html">Home</a>
+  <a href="produk.html">Produk</a>
+  <a href="keranjang.html">Keranjang</a>
+  <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <div class="deskripsi-toko">
+    <p>Selamat datang di Toko Zahra tempat belanja online kebutuhan sehari-hari kamu! Kami menyediakan berbagai produk berkualitas mulai dari kipas portable, bantal leher, tumbler, hingga aksesori lucu untuk menemani aktivitas harianmu. Belanja praktis, harga bersahabat!</p>
+  </div>
+
+  <h2 style="text-align:center;">Produk Pilihan</h2>
+
+  <div class="produk">
+    <div class="item">
+      <img src="images/kipas.jpg" alt="Kipas Portable">
+      <h3>Kipas Angin Portable</h3>
+      <p>Rp 150.000</p>
+      <button onclick="lihatDetail('Kipas Angin Portable', 'Rp 150.000', 'Atasi rasa gerah dimana saja dengan kipas portable berkualitas.', 'images/kipas.jpg')">Lihat Detail</button>
+      <button class="btn-beli" onclick="beliProduk('Kipas Angin Portable')">Beli</button>
+    </div>
+
+    <div class="item">
+      <img src="images/bantal.jpg" alt="Bantal Leher">
+      <h3>Bantal Leher</h3>
+      <p>Rp 35.000</p>
+      <button onclick="lihatDetail('Bantal Leher', 'Rp 35.000', 'Desain ergonomis dan bahan lembut, cocok untuk traveling maupun bersantai di rumah.', 'images/bantal.jpg')">Lihat Detail</button>
+      <button class="btn-beli" onclick="beliProduk('Bantal Leher')">Beli</button>
+    </div>
+
+    <div class="item">
+      <img src="images/tumbler.jpg" alt="Tumbler Stainless">
+      <h3>Tumbler Stainless</h3>
+      <p>Rp 100.000</p>
+      <button onclick="lihatDetail('Tumbler Stainless', 'Rp 100.000', 'Mampu menjaga suhu minuman tetap panas atau dingin lebih lama.', 'images/tumbler.jpg')">Lihat Detail</button>
+      <button class="btn-beli" onclick="beliProduk('Tumbler Stainless')">Beli</button>
+    </div>
+
+    <div class="item">
+      <img src="images/case.jpg" alt="Case HP">
+      <h3>Case HP</h3>
+      <p>Rp 25.000</p>
+      <button onclick="lihatDetail('Case HP', 'Rp 25.000', 'Tersedia untuk berbagai type dan desain.', 'images/case.jpg')">Lihat Detail</button>
+      <button class="btn-beli" onclick="beliProduk('Case HP')">Beli</button>
+    </div>
+
+    <div class="item">
+      <img src="images/gantungan.jpg" alt="Gantungan Kunci">
+      <h3>Gantungan Kunci</h3>
+      <p>Rp 25.000</p>
+      <button onclick="lihatDetail('Gantungan Kunci', 'Rp 25.000', 'Tersedia berbagai pilihan karakter unik dan lucu, cocok untuk hadiah maupun koleksi pribadi.', 'images/gantungan.jpg')">Lihat Detail</button>
+      <button class="btn-beli" onclick="beliProduk('Gantungan Kunci')">Beli</button>
+    </div>
+  </div>
+
+</body>
+</html>
